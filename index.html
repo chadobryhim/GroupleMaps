@@ -3,13 +3,34 @@
 <head>
     <title>Groop</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 </head>
 <body>
-<div id="map"></div>
-<script src="assets/javascript/grouponAPI.js"></script>
+    <div id="map"></div>
+    <div class="ui raised very padded text container segment" id="input">
+      <h2 class="ui header">User Input</h2>
+      <div class="ui action input">
+        <input type="text" placeholder="City, State">
+        <button class="ui button">Go</button>
+      </div>
+      <p>
+      <select name="categories" class="ui dropdown">
+        <option value="">Categories</option>
+        <option value="allDeals">All Deals</option>
+        <option value="automotive">Automotive</option>
+        <option value="beautyAndSpas">Beauty and Spas</option>
+        <option value="foodAndDrink">Food and Drink</option>
+        <option value="healthAndFitness">Health and Fitness</option>
+        <option value="personalServices">Personal Services</option>
+        <option value="retail">Retail</option>
+        <option value="thingsToDo">Things To Do</option>
+      </select>
+    </div><script src="assets/javascript/grouponAPI.js"></script>
 <script type="assets/javascript/googleAPI.js"></script>
 <script src="assets/javascript/javascript.js"></script>
 <script async defer
