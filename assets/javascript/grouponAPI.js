@@ -6,7 +6,6 @@ $(document).on('click', '#user-input-button', function() {
     var dealCategory = $('#deal-category').val();
     console.log(dealCategory);
 
-    var searchAttributeTwo = $('searchAttributeTwoIDorClassHere').val();
     var searchAttributeThree = $('searchAttributeThreeIDorClassHere').val();
     var searchAttributeFour = $('searchAttributeFourIDorClassHere').val();
     var searchAttributeFive = $('searchAttributeFiveIDorClassHere').val();
