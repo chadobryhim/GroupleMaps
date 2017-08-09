@@ -1,7 +1,10 @@
 var testLocationReturn = [];
 
 $(document).on('click', '#user-input-button', function() {
+    userInputEntered();
+});
 
+function userInputEntered() {
     // This will be the variable used to pass on to the api url f
     var location = $('#user-location').val();
     console.log(location);
@@ -37,7 +40,6 @@ $(document).on('click', '#user-input-button', function() {
                 lat: response.deals[i].division.lat,
                 lng: response.deals[i].division.lng
             });
-        };
+        }
     });
-
-});
+}
