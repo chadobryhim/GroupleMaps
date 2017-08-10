@@ -37,9 +37,23 @@ function userInputEntered() {
         //Creating the array with the info to be passed to the google api
         for (var i = response.deals.length - 1; i >= 0; i--) {
             testLocationReturn.push({
-                lat: response.deals[i].division.lat,
-                lng: response.deals[i].division.lng
+                loc: {
+                    lat: response.deals[i].division.lat,
+                    lng: response.deals[i].division.lng
+                },
+                content: {
+                    descrip: response.deals[i].options[0].details[0],
+                    adTitle: response.deals[i].title
+                },
+                price: {
+                    regular: response.deals[i].options[0].value.amount,
+                    discount: response.deals[i].options[0].discount.amount,
+                    newPrice: response.deals[i].options[0].price.amount
+                },
+                contact: {
+                    websiteUrl: response.deals[i].merchant.websiteUrl
+                }
             });
-        }
+        };
     });
-}
+};
