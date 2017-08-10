@@ -1,4 +1,4 @@
-var testLocationReturn = [];
+var dealReturn = [];
 
 $(document).on('click', '#user-input-button', function() {
     userInputEntered();
@@ -36,7 +36,7 @@ function userInputEntered() {
         //Creating the array with the info to be passed to the google api
         //Currently the array pulls info on just the first deal
         for (var i = response.deals.length - 1; i >= 0; i--) {
-            testLocationReturn.push({
+            dealReturn.push({
                 loc: {
                     lat: response.deals[i].division.lat,
                     lng: response.deals[i].division.lng
