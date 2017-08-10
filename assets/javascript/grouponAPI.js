@@ -32,9 +32,9 @@ function userInputEntered() {
         dataType: "jsonp"
     }).done(function(response) {
         console.log(response);
-        console.log(response.deals[1].division);
 
         //Creating the array with the info to be passed to the google api
+        //Currently the array pulls info on just the first deal
         for (var i = response.deals.length - 1; i >= 0; i--) {
             testLocationReturn.push({
                 loc: {
@@ -42,8 +42,9 @@ function userInputEntered() {
                     lng: response.deals[i].division.lng
                 },
                 content: {
-                    descrip: response.deals[i].options[0].details[0],
-                    adTitle: response.deals[i].title
+                    description: response.deals[i].options[0].details[0],
+                    adTitle: response.deals[i].title,
+                    image: response.deals[i].grid4ImageUrl
                 },
                 price: {
                     regular: response.deals[i].options[0].value.amount,
@@ -51,7 +52,8 @@ function userInputEntered() {
                     newPrice: response.deals[i].options[0].price.amount
                 },
                 contact: {
-                    websiteUrl: response.deals[i].merchant.websiteUrl
+                    websiteUrl: response.deals[i].merchant.websiteUrl,
+                    dealUrl: response.deals[i].dealUrl
                 }
             });
         };

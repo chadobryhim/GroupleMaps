@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51b92fce-089f-4044-be3e-76eb203e9a15" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/preferred-vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/javascript/grouponAPI.js" afterPath="$PROJECT_DIR$/assets/javascript/grouponAPI.js" />
     </list>
@@ -19,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42265624">
+    <splitter split-orientation="horizontal" split-proportion="0.46015626">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
@@ -39,8 +36,8 @@
           <file leaf-file-name="grouponAPI.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="654">
-                  <caret line="53" column="69" lean-forward="false" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="69" />
+                <state relative-caret-position="474">
+                  <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -152,7 +149,7 @@
       <workItem from="1502244451129" duration="4000" />
       <workItem from="1502287927906" duration="85000" />
       <workItem from="1502309943243" duration="12000" />
-      <workItem from="1502406658154" duration="1205000" />
+      <workItem from="1502406658154" duration="2109000" />
     </task>
     <task id="LOCAL-00001" summary="Added html structure">
       <created>1501949301952</created>
@@ -224,11 +221,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502243274297</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added more things to the groupon object">
+      <created>1502408005406</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1502408005407</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13673000" />
+    <option name="totallyTimeSpent" value="14577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="86" width="1511" height="893" extended-state="0" />
@@ -281,7 +285,8 @@
     <MESSAGE value="Got api to return, hitting go will use blue valley as a placeholder location" />
     <MESSAGE value="Got the api to return and started to create the array to pass what info we want on to the google api" />
     <MESSAGE value="Commented and made the ajax call function global to be passed in to the event handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented and made the ajax call function global to be passed in to the event handler" />
+    <MESSAGE value="Added more things to the groupon object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more things to the groupon object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -426,8 +431,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="53" column="69" lean-forward="false" selection-start-line="53" selection-start-column="69" selection-end-line="53" selection-end-column="69" />
+        <state relative-caret-position="474">
+          <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
           <folding />
         </state>
       </provider>
