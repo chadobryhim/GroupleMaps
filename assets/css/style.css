@@ -16,13 +16,22 @@ html, body {
 	z-index: 0;
 	padding: 10px;
 	margin: 10px;
+	width: 30%;
+}
+
+#locationInput {
 	width: 100%;
 }
 
 #deal-category {
-	width: 100%
+	width: 100%;
+	border-radius: .28571429rem;
 }
 
 .sidebar {
 	z-index: 2;
+}
+
+.ui.grid {
+	background: #fff;
 }

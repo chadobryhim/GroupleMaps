@@ -33,11 +33,44 @@
 		</a>
 	</div>
 
+  <div class="ui sidebar bottom fixed stackable three column grid">
+    <!--button class="ui floated icon basic button" id="closeBtn">
+      <i class="close icon"></i>
+    </button-->
+    <div class="column">
+      <div class="ui segment">
+        <h4>#1 Deal name</h4>
+          Deal business<br>
+          Deal value<br>
+          Deal location<br>
+          Deal link
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <h4>#2 Deal name</h4>
+          Deal business<br>
+          Deal value<br>
+          Deal location<br>
+          Deal link
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <h4>#3 Deal name</h4>
+          Deal business<br>
+          Deal value<br>
+          Deal location<br>
+          Deal link
+      </div>
+    </div>
+  </div>
+
     <div class="pusher" id="map"></div>
 
     <div class="ui raised very padded text container segment" id="input">
       <h2 class="ui header">User Input</h2>
-      <div class="ui action input">
+      <div class="ui action input" id="locationInput">
         <input id="user-location" type="text" placeholder="City, State">
         <button id="user-input-button" class="ui button">Go</button>
       </div>
@@ -54,7 +87,9 @@
         <option value="things-to-do">Things To Do</option>
       </select>
       <p></p>
-      <button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button><button class="ui primary basic button" id="aboutBtn"><a href="#About">About</a></button>
+      <button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button>
+      <button class="ui primary basic button" id="aboutBtn"><a href="#about">About</a></button>
+      <button class="ui primary basic button" id="resultsBtn"><a href="#results">Results</a></button>
     </div>
 
     <script src="assets/javascript/grouponAPI.js"></script>
@@ -76,6 +111,17 @@
   			.sidebar('toggle');
 		initMap();
   		});
+
+      $("#resultsBtn").click(function(){
+    $('.ui.bottom.sidebar')
+      .sidebar('setting', 'transition', 'overlay' )
+        .sidebar('toggle');
+    initMap();
+      });
+
+//      $("#closeBtn")
+//  .sidebar('toggle');
+//;
 
 	</script>
 </body>
