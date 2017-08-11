@@ -22,8 +22,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+                <state relative-caret-position="1680">
+                  <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -36,8 +36,8 @@
           <file leaf-file-name="grouponAPI.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="79" column="2" lean-forward="true" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
+                <state relative-caret-position="720">
+                  <caret line="79" column="2" lean-forward="false" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -167,7 +167,7 @@
       <workItem from="1502244451129" duration="4000" />
       <workItem from="1502287927906" duration="85000" />
       <workItem from="1502309943243" duration="12000" />
-      <workItem from="1502406658154" duration="9517000" />
+      <workItem from="1502406658154" duration="9736000" />
     </task>
     <task id="LOCAL-00001" summary="Added html structure">
       <created>1501949301952</created>
@@ -267,11 +267,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502410180744</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Updated the object creator to include each individual deal per location">
+      <created>1502417183459</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1502417183459</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21985000" />
+    <option name="totallyTimeSpent" value="22204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-132" y="39" width="1684" height="944" extended-state="0" />
@@ -328,7 +335,8 @@
     <MESSAGE value="Added more things to the groupon object again" />
     <MESSAGE value="Changed the name of the deal array" />
     <MESSAGE value="Improved URL building for groupon api call" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved URL building for groupon api call" />
+    <MESSAGE value="Updated the object creator to include each individual deal per location" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the object creator to include each individual deal per location" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -465,18 +473,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="79" column="2" lean-forward="true" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
+        <state relative-caret-position="1680">
+          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+        <state relative-caret-position="720">
+          <caret line="79" column="2" lean-forward="false" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
           <folding />
         </state>
       </provider>
