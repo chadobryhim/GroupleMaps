@@ -5,8 +5,10 @@
 var map, infoWindow;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 6
+        center: {
+                "lat": 38.8984667,
+                "lng": -94.70188999999999},
+        zoom: 13
     });
     infoWindow = new google.maps.InfoWindow;
     // Try HTML5 geolocation.
@@ -16,10 +18,12 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
+            console.log(pos);
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Found you!');
+            infoWindow.setContent('You!');
             infoWindow.open(map);
             map.setCenter(pos);
+            zoom: 13;
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });

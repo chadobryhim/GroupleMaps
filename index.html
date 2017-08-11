@@ -11,6 +11,7 @@
     <meta charset="utf-8">
 </head>
 <body>
+<<<<<<< HEAD
     <div id="map"></div>
     <div class="ui raised very padded text container segment" id="input">
       <h2 class="ui header">User Input</h2>
@@ -32,11 +33,80 @@
       </select>
     </div>
     <script src="assets/javascript/grouponAPI.js"></script>
-<script type="assets/javascript/googleAPI.js"></script>
+<script src="assets/javascript/googleAPI.js"></script>
 <script src="assets/javascript/javascript.js"></script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap">
 </script>
+=======
+>>>>>>> 42688dbd3d10ff8df34f01f982db5f268f6eb0d1
 
+	<div class="ui sidebar right vertical menu">
+		<a class="item"><h2 class="ui header">About</h2>
+		</a>
+		<a class="item">
+		  <p>GroupMapper will use Groupon and Google Map APIs to capture the user’s location via IP address and serve a map of deals in the area.</p>
+		</a>
+		<a class="item">
+		  <p>Groupon, while a great service, is needlessly cluttered for the average user. We will visualize the offers in a way that provides a superior and simpler experience. Users will be encouraged to return to easily find their bookmarked deals.</p>
+		</a>
+	</div>
+
+	<div class="ui sidebar left vertical menu">
+		<a class="item"><h2 class="ui header">My Account</h2>
+		</a>
+		<a class="item">
+		  <p>Login</p>
+		</a>
+		<a class="item">
+		  <p>Favorites</p>
+		</a>
+	</div>
+
+    <div class="pusher" id="map"></div>
+
+    <div class="ui raised very padded text container segment" id="input">
+      <h2 class="ui header">User Input</h2>
+      <div class="ui action input">
+        <input id="user-location" type="text" placeholder="City, State">
+        <button id="user-input-button" class="ui button">Go</button>
+      </div>
+      <p>
+      <select id="deal-category" name="categories" class="ui dropdown">
+        <option value="">Categories</option>
+        <option value="">All Deals</option>
+        <option value="automotive">Automotive</option>
+        <option value="beauty-and-spas">Beauty and Spas</option>
+        <option value="food-and-drink">Food and Drink</option>
+        <option value="health-and-fitness">Health and Fitness</option>
+        <option value="personal-services">Personal Services</option>
+        <option value="retail">Retail</option>
+        <option value="things-to-do">Things To Do</option>
+      </select>
+      <p></p>
+      <button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button><button class="ui primary basic button" id="aboutBtn"><a href="#About">About</a></button>
+    </div>
+
+    <script src="assets/javascript/grouponAPI.js"></script>
+	<script type="assets/javascript/googleAPI.js"></script>
+	<script src="assets/javascript/javascript.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap"></script>
+
+	<script type="text/javascript">
+		$("#aboutBtn").click(function(){
+		$('.ui.right.sidebar')
+			.sidebar('setting', 'transition', 'overlay' )
+  			.sidebar('toggle');
+		initMap();
+  		});
+
+  		$("#accountBtn").click(function(){
+		$('.ui.left.sidebar')
+			.sidebar('setting', 'transition', 'overlay' )
+  			.sidebar('toggle');
+		initMap();
+  		});
+
+	</script>
 </body>
 </html>
