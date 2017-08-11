@@ -13,17 +13,13 @@ html, body {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: 1;
+	z-index: 0;
 	padding: 10px;
 	margin: 10px;
-	width: 30%;
+	width: 100%;
 }
 
-#locationSearch {
-	width: 100%
-}
-
-#categories {
+#deal-category {
 	width: 100%
 }
 
