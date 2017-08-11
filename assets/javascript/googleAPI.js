@@ -1,10 +1,15 @@
 var testObject = {//a test groupon oject that will be how all the api needs to follow
   pos: {
-          "lat": 39.0853,
-          "lng": -94.5856},
-  name: "Fun info"
+          "lat": 38.899794,
+          "lng": -94.726138},
+  dealName: "Fun info",
+  company: "clowInc",
+  deal: "a deal",
+  grouponURL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  dealDate: "10/17/1993"
   }
 var markersArray = [];
+var grouponSearcher = 10;
 
 
 
@@ -12,11 +17,21 @@ var markersArray = [];
 
 //places a marker
   function placeMarker(object){
-    var uluru = {lat: object.pos.lat, lng: object.pos.lng};
-    var name = object.name;
+    var latLng = {lat: object.pos.lat, lng: object.pos.lng};
+    var name = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">' +object.dealName+'</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b> Company:</b> '+ object.company+'</b></p>' +
+            '<p><b>The Deal: </b>'+ object.deal + '</p>'
+            '<p><b> Coupon Dates: </b>'+ object.dealDate +'</p>'+
+            '<p><b>URL: </b><a href="'+ object.grouponURL+'">'+ 'To Groupon we go</a></p>'+
+            '</div>'+
+            '</div>';
 
     var marker = new google.maps.Marker({
-      position: uluru,
+      position: latLng,
       map: map
     });
     //Creates the content window to be filled in by the object
@@ -52,4 +67,28 @@ var markersArray = [];
   function deleteMarkers() {
     clearMarkers();
     markers = [];
+  }
+
+  function placeAllMarkers(GrouponObject){
+    for (var i = 0; i < grouponSearcher; i++) {
+      var thisDeal = GrouponObject[i];
+      var newMarker = {
+        pos: {
+              "lat": "",
+              "lng": ""},
+      dealName: "",
+      company: "",
+      deal: "",
+      grouponURL: "",
+      dealDate: ""
+      }
+      newMarker.pos.lat = thisDeal.rando;
+      newMarker.pos.lng = thisDeal.rando;
+      newMarker.dealName = thisDeal.rando;
+      newMarker.company = thisDeal.rando;
+      newMarker.deal = thisDeal.rando;
+      newMarker.grouponURL = thisDeal.rando;
+      newMarker.dealDate = thisDeal.rando;
+      placeMarker(newMarker);
+    }
   }
