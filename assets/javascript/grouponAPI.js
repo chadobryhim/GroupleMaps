@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-$(document).on('click', '#user-input-button', function() {
-
-   var location = $('#user-location').val();
-   console.log(location);
-
-    var testLocation = {
-        "location": {
-            "lat": 51.0,
-            "lng": -0.1
-        },
-        "accuracy": 1200.4
-   };
-
-    console.log(testLocation.location.lat);
-
-    var dealCategory = $('#deal-category').val();
-    console.log(dealCategory);
-
-    var xhr = $.get('https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&filters=category:' + dealCategory + '&lat=' + testLocation.location.lat + '&long=' + testLocation.location.lng);
-
-    xhr.done(function(result) {
-        console.log(result);
-    });
-});
-=======
 var dealReturn = [];
 
 $(document).on('click', '#user-input-button', function() {
@@ -64,32 +38,44 @@ function userInputEntered() {
         dataType: "jsonp"
     }).done(function(response) {
         console.log(response);
-
+        var k = 0;
+        dealReturn = [];
         //Creating the array with the info to be passed to the google api
         //Currently the array pulls info on just the first deal
         for (var i = response.deals.length - 1; i >= 0; i--) {
+            var deal = response.deals[i];
             dealReturn.push({
                 loc: {
-                        lat: response.deals[i].division.lat,
-                        lng: response.deals[i].division.lng
+                    lat: deal.division.lat,
+                    lng: deal.division.lng
                 },
                 content: {
-                    description: response.deals[i].options[0].details[0],
-                    adTitle: response.deals[i].title,
-                    shortTitle: response.deals[i].announcementTitle,
-                    image: response.deals[i].grid4ImageUrl
-                },
-                price: {
-                    regular: response.deals[i].options[0].value.amount,
-                    discount: response.deals[i].options[0].discount.amount,
-                    newPrice: response.deals[i].options[0].price.amount
+                    adTitle: deal.title,
+                    shortTitle: deal.announcementTitle,
+                    image: deal.grid4ImageUrl,
+                    indDeals: []
                 },
                 contact: {
-                    websiteUrl: response.deals[i].merchant.websiteUrl,
-                    dealUrl: response.deals[i].dealUrl
+                    websiteUrl: deal.merchant.websiteUrl,
+                    dealUrl: deal.dealUrl
                 }
             });
-        };
+
+            console.log(dealReturn);
+
+            for (var j = 0; j < response.deals[i].options.length; j++) {
+                dealReturn[k].content.indDeals.push({
+                    content: {
+                        description: deal.options[j].details[0]
+                    },
+                    price: {
+                        regular: deal.options[j].value.amount,
+                        discount: deal.options[j].discount.amount,
+                        newPrice: deal.options[j].price.amount
+                    }
+                });
+            }
+            k++
+        }
     });
 };
->>>>>>> 42688dbd3d10ff8df34f01f982db5f268f6eb0d1
