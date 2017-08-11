@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51b92fce-089f-4044-be3e-76eb203e9a15" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/javascript/grouponAPI.js" afterPath="$PROJECT_DIR$/assets/javascript/grouponAPI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +22,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1680">
-                  <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
@@ -36,7 +36,7 @@
           <file leaf-file-name="grouponAPI.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="720">
+                <state relative-caret-position="1185">
                   <caret line="79" column="2" lean-forward="false" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
                   <folding />
                 </state>
@@ -61,8 +61,8 @@
         <option value="$PROJECT_DIR$/assets/css/reset.css" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/assets/javascript/javascript.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/javascript/grouponAPI.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -80,8 +80,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-132" />
-    <option name="y" value="39" />
+    <option name="x" value="-224" />
+    <option name="y" value="153" />
     <option name="width" value="1684" />
     <option name="height" value="944" />
   </component>
@@ -167,7 +167,7 @@
       <workItem from="1502244451129" duration="4000" />
       <workItem from="1502287927906" duration="85000" />
       <workItem from="1502309943243" duration="12000" />
-      <workItem from="1502406658154" duration="9736000" />
+      <workItem from="1502406658154" duration="9828000" />
     </task>
     <task id="LOCAL-00001" summary="Added html structure">
       <created>1501949301952</created>
@@ -274,14 +274,21 @@
       <option name="project" value="LOCAL" />
       <updated>1502417183459</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated the object creator to include each individual deal per location">
+      <created>1502417367808</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1502417367808</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22204000" />
+    <option name="totallyTimeSpent" value="22296000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-132" y="39" width="1684" height="944" extended-state="0" />
+    <frame x="-224" y="153" width="1684" height="944" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1371734" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -473,18 +480,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state relative-caret-position="1185">
+          <caret line="79" column="2" lean-forward="false" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="79" column="2" lean-forward="false" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
+        <state relative-caret-position="180">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding />
         </state>
       </provider>
