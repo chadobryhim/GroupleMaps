@@ -11,15 +11,39 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <div id="map"></div>
+
+	<div class="ui sidebar right vertical menu">
+		<a class="item"><h2 class="ui header">About</h2>
+		</a>
+		<a class="item">
+		  <p>GroupMapper will use Groupon and Google Map APIs to capture the user’s location via IP address and serve a map of deals in the area.</p>
+		</a>
+		<a class="item">
+		  <p>Groupon, while a great service, is needlessly cluttered for the average user. We will visualize the offers in a way that provides a superior and simpler experience. Users will be encouraged to return to easily find their bookmarked deals.</p>
+		</a>
+	</div>
+
+	<div class="ui sidebar left vertical menu">
+		<a class="item"><h2 class="ui header">My Account</h2>
+		</a>
+		<a class="item">
+		  <p>Login</p>
+		</a>
+		<a class="item">
+		  <p>Favorites</p>
+		</a>
+	</div>
+
+    <div class="pusher" id="map"></div>
+
     <div class="ui raised very padded text container segment" id="input">
       <h2 class="ui header">User Input</h2>
-      <div class="ui action input">
+      <div class="ui action input" id="locationSearch">
         <input type="text" placeholder="City, State">
-        <button class="ui button">Go</button>
+        <button class="ui primary basic button">Go</button>
       </div>
-      <p>
-      <select name="categories" class="ui dropdown">
+      <p></p>
+      <select name="categories" class="ui dropdown" id="categories">
         <option value="">Categories</option>
         <option value="allDeals">All Deals</option>
         <option value="automotive">Automotive</option>
@@ -30,12 +54,30 @@
         <option value="retail">Retail</option>
         <option value="thingsToDo">Things To Do</option>
       </select>
-    </div><script src="assets/javascript/grouponAPI.js"></script>
-<script type="assets/javascript/googleAPI.js"></script>
-<script src="assets/javascript/javascript.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap">
-</script>
+      <p></p>
+      <button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button><button class="ui primary basic button" id="aboutBtn"><a href="#About">About</a></button>
+    </div>
 
+    <script src="assets/javascript/grouponAPI.js"></script>
+	<script type="assets/javascript/googleAPI.js"></script>
+	<script src="assets/javascript/javascript.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap"></script>
+
+	<script type="text/javascript"> 
+		$("#aboutBtn").click(function(){
+		$('.ui.right.sidebar')
+			.sidebar('setting', 'transition', 'overlay' )
+  			.sidebar('toggle');
+		initMap();
+  		});
+
+  		$("#accountBtn").click(function(){
+		$('.ui.left.sidebar')
+			.sidebar('setting', 'transition', 'overlay' )
+  			.sidebar('toggle');
+		initMap();
+  		});
+
+	</script>
 </body>
 </html>
