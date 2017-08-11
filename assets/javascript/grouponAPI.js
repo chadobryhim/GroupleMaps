@@ -43,20 +43,21 @@ function userInputEntered() {
         //Creating the array with the info to be passed to the google api
         //Currently the array pulls info on just the first deal
         for (var i = response.deals.length - 1; i >= 0; i--) {
+            var deal = response.deals[i];
             dealReturn.push({
                 loc: {
-                    lat: response.deals[i].division.lat,
-                    lng: response.deals[i].division.lng
+                    lat: deal.division.lat,
+                    lng: deal.division.lng
                 },
                 content: {
-                    adTitle: response.deals[i].title,
-                    shortTitle: response.deals[i].announcementTitle,
-                    image: response.deals[i].grid4ImageUrl,
+                    adTitle: deal.title,
+                    shortTitle: deal.announcementTitle,
+                    image: deal.grid4ImageUrl,
                     indDeals: []
                 },
                 contact: {
-                    websiteUrl: response.deals[i].merchant.websiteUrl,
-                    dealUrl: response.deals[i].dealUrl
+                    websiteUrl: deal.merchant.websiteUrl,
+                    dealUrl: deal.dealUrl
                 }
             });
 
@@ -65,12 +66,12 @@ function userInputEntered() {
             for (var j = 0; j < response.deals[i].options.length; j++) {
                 dealReturn[k].content.indDeals.push({
                     content: {
-                        description: response.deals[i].options[j].details[0]
+                        description: deal.options[j].details[0]
                     },
                     price: {
-                        regular: response.deals[i].options[j].value.amount,
-                        discount: response.deals[i].options[j].discount.amount,
-                        newPrice: response.deals[i].options[j].price.amount
+                        regular: deal.options[j].value.amount,
+                        discount: deal.options[j].discount.amount,
+                        newPrice: deal.options[j].price.amount
                     }
                 });
             }
