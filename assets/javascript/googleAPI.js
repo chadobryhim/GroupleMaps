@@ -2,11 +2,22 @@ var testObject = {//a test groupon oject that will be how all the api needs to f
   pos: {
           "lat": 38.899794,
           "lng": -94.726138},
-  dealName: "Fun info",
-  company: "clowInc",
-  deal: "a deal",
-  grouponURL: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  dealDate: "10/17/1993"
+  content: {
+    description: "For your weirdos",
+    adTitle:"Lions for your militarty",
+    shortTitle: "We got Weird Shit",
+    image: ""
+  },
+  price: {
+    regular: "One MILLLION DOLLARS",
+    discount: "5000%",
+    newPrice: "You First Born"
+  },
+  contact: {
+    websiteUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    dealUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }
+
   }
 var markersArray = [];
 var grouponSearcher = 10;
@@ -14,19 +25,18 @@ var grouponSearcher = 10;
 
 
 
-
 //places a marker
   function placeMarker(object){
     var latLng = {lat: object.pos.lat, lng: object.pos.lng};
-    var name = '<div id="content">'+
+    var infoWindow = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">' +object.dealName+'</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">' +object.content.shortTitle+'</h1>'+
             '<div id="bodyContent">'+
-            '<p><b> Company:</b> '+ object.company+'</b></p>' +
-            '<p><b>The Deal: </b>'+ object.deal + '</p>'
-            '<p><b> Coupon Dates: </b>'+ object.dealDate +'</p>'+
-            '<p><b>URL: </b><a href="'+ object.grouponURL+'">'+ 'To Groupon we go</a></p>'+
+            '<p><b>The Deal: </b> '+ object.content.adTitle+'</p>' +
+            '<p><b>The Fine Print: </b>'+ object.content.description + '</p>' +
+            '<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
+            '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
             '</div>'+
             '</div>';
 
@@ -36,7 +46,7 @@ var grouponSearcher = 10;
     });
     //Creates the content window to be filled in by the object
     var infowindow = new google.maps.InfoWindow({
-      content: name
+      content: infoWindow
     });
     //pushes the marker into an array so we can remove markers latter
     markersArray.push(marker);
@@ -71,24 +81,28 @@ var grouponSearcher = 10;
 
   function placeAllMarkers(GrouponObject){
     for (var i = 0; i < grouponSearcher; i++) {
-      var thisDeal = GrouponObject[i];
+      var thisDeal = dealReturn[i];
       var newMarker = {
         pos: {
-              "lat": "",
-              "lng": ""},
-      dealName: "",
-      company: "",
-      deal: "",
-      grouponURL: "",
-      dealDate: ""
+              "lat":  thisDeal.loc.lat,
+              "lng":  thisDeal.loc.lng},
+        content: {
+            description: thisDeal.options[0].details[0],
+            adTitle: thisDeal.title,
+            shortTitle: thisDeal.announcementTitle,
+            image: thisDeal.grid4ImageUrl
+        },
+        price: {
+            regular: thisDeal.options[0].value.amount,
+            discount: thisDeal.options[0].discount.amount,
+            newPrice: thisDeal.options[0].price.amount
+        },
+        contact: {
+          websiteUrl: thisDeal.merchant.websiteUrl,
+          dealUrl: thisDeal.dealUrl
+        }
       }
-      newMarker.pos.lat = thisDeal.rando;
-      newMarker.pos.lng = thisDeal.rando;
-      newMarker.dealName = thisDeal.rando;
-      newMarker.company = thisDeal.rando;
-      newMarker.deal = thisDeal.rando;
-      newMarker.grouponURL = thisDeal.rando;
-      newMarker.dealDate = thisDeal.rando;
+
       placeMarker(newMarker);
     }
   }
