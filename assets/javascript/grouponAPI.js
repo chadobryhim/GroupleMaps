@@ -38,31 +38,43 @@ function userInputEntered() {
         dataType: "jsonp"
     }).done(function(response) {
         console.log(response);
-
+        var k = 0;
+        dealReturn = [];
         //Creating the array with the info to be passed to the google api
         //Currently the array pulls info on just the first deal
         for (var i = response.deals.length - 1; i >= 0; i--) {
             dealReturn.push({
                 loc: {
-                        lat: response.deals[i].division.lat,
-                        lng: response.deals[i].division.lng
+                    lat: response.deals[i].division.lat,
+                    lng: response.deals[i].division.lng
                 },
                 content: {
-                    description: response.deals[i].options[0].details[0],
                     adTitle: response.deals[i].title,
                     shortTitle: response.deals[i].announcementTitle,
-                    image: response.deals[i].grid4ImageUrl
-                },
-                price: {
-                    regular: response.deals[i].options[0].value.amount,
-                    discount: response.deals[i].options[0].discount.amount,
-                    newPrice: response.deals[i].options[0].price.amount
+                    image: response.deals[i].grid4ImageUrl,
+                    indDeals: []
                 },
                 contact: {
                     websiteUrl: response.deals[i].merchant.websiteUrl,
                     dealUrl: response.deals[i].dealUrl
                 }
             });
-        };
+
+            console.log(dealReturn);
+
+            for (var j = 0; j < response.deals[i].options.length; j++) {
+                dealReturn[k].content.indDeals.push({
+                    content: {
+                        description: response.deals[i].options[j].details[0]
+                    },
+                    price: {
+                        regular: response.deals[i].options[j].value.amount,
+                        discount: response.deals[i].options[j].discount.amount,
+                        newPrice: response.deals[i].options[j].price.amount
+                    }
+                });
+            }
+            k++
+        }
     });
 };
