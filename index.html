@@ -38,21 +38,21 @@
 
     <div class="ui raised very padded text container segment" id="input">
       <h2 class="ui header">User Input</h2>
-      <div class="ui action input" id="locationSearch">
-        <input type="text" placeholder="City, State">
-        <button class="ui primary basic button">Go</button>
+      <div class="ui action input">
+        <input id="user-location" type="text" placeholder="City, State">
+        <button id="user-input-button" class="ui button">Go</button>
       </div>
-      <p></p>
-      <select name="categories" class="ui dropdown" id="categories">
+      <p>
+      <select id="deal-category" name="categories" class="ui dropdown">
         <option value="">Categories</option>
-        <option value="allDeals">All Deals</option>
+        <option value="">All Deals</option>
         <option value="automotive">Automotive</option>
-        <option value="beautyAndSpas">Beauty and Spas</option>
-        <option value="foodAndDrink">Food and Drink</option>
-        <option value="healthAndFitness">Health and Fitness</option>
-        <option value="personalServices">Personal Services</option>
+        <option value="beauty-and-spas">Beauty and Spas</option>
+        <option value="food-and-drink">Food and Drink</option>
+        <option value="health-and-fitness">Health and Fitness</option>
+        <option value="personal-services">Personal Services</option>
         <option value="retail">Retail</option>
-        <option value="thingsToDo">Things To Do</option>
+        <option value="things-to-do">Things To Do</option>
       </select>
       <p></p>
       <button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button><button class="ui primary basic button" id="aboutBtn"><a href="#About">About</a></button>
@@ -63,7 +63,7 @@
 	<script src="assets/javascript/javascript.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap"></script>
 
-	<script type="text/javascript"> 
+	<script type="text/javascript">
 		$("#aboutBtn").click(function(){
 		$('.ui.right.sidebar')
 			.sidebar('setting', 'transition', 'overlay' )
