@@ -16,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46015626">
+    <splitter split-orientation="horizontal" split-proportion="0.19609375">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
@@ -36,8 +36,8 @@
           <file leaf-file-name="grouponAPI.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="445">
-                  <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+                <state relative-caret-position="390">
+                  <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -166,7 +166,7 @@
       <workItem from="1502244451129" duration="4000" />
       <workItem from="1502287927906" duration="85000" />
       <workItem from="1502309943243" duration="12000" />
-      <workItem from="1502406658154" duration="2225000" />
+      <workItem from="1502406658154" duration="3111000" />
     </task>
     <task id="LOCAL-00001" summary="Added html structure">
       <created>1501949301952</created>
@@ -252,11 +252,18 @@
       <option name="project" value="LOCAL" />
       <updated>1502409079620</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changed the name of the deal array">
+      <created>1502409214092</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1502409214092</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14693000" />
+    <option name="totallyTimeSpent" value="15579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="86" width="1511" height="893" extended-state="0" />
@@ -311,10 +318,13 @@
     <MESSAGE value="Commented and made the ajax call function global to be passed in to the event handler" />
     <MESSAGE value="Added more things to the groupon object" />
     <MESSAGE value="Added more things to the groupon object again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more things to the groupon object again" />
+    <MESSAGE value="Changed the name of the deal array" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the name of the deal array" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -456,8 +466,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>

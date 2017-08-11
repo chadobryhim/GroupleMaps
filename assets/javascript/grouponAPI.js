@@ -23,8 +23,14 @@ function userInputEntered() {
 
     // How many deals are returned from the api call, currently hardcoded
     var dealLimit = 10;
+    var url;
 
-    var url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&filters=category:' + dealCategory + '&lat=' + testLocation.location.lat + '&long=' + testLocation.location.lng + '&limit=' + dealLimit;
+    if ($('#deal-category').val() != '') {
+        url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&filters=category:' + dealCategory + '&lat=' + testLocation.location.lat + '&long=' + testLocation.location.lng + '&limit=' + dealLimit;
+    } else {
+        url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&lat=' + testLocation.location.lat + '&long=' + testLocation.location.lng + '&limit=' + dealLimit;
+    };
+
 
     $.ajax({
         url: url,
@@ -38,12 +44,13 @@ function userInputEntered() {
         for (var i = response.deals.length - 1; i >= 0; i--) {
             dealReturn.push({
                 loc: {
-                    lat: response.deals[i].division.lat,
-                    lng: response.deals[i].division.lng
+                        lat: response.deals[i].division.lat,
+                        lng: response.deals[i].division.lng
                 },
                 content: {
                     description: response.deals[i].options[0].details[0],
                     adTitle: response.deals[i].title,
+                    shortTitle: response.deals[i].announcementTitle,
                     image: response.deals[i].grid4ImageUrl
                 },
                 price: {
