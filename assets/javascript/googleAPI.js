@@ -1,5 +1,5 @@
 var testObject = {//a test groupon oject that will be how all the api needs to follow
-  pos: {
+  loc: {
           "lat": 39.01214,
           "lng": - 94.39042},
   content: {
@@ -19,6 +19,28 @@ var testObject = {//a test groupon oject that will be how all the api needs to f
   }
 
   }
+var testObject2 = {
+
+    loc: {
+            lat: 39,
+            lng: - 94},
+    content: {
+      description: "For your weirdos",
+      adTitle:"Lions for your militarty",
+      shortTitle: "We got Weird Shit",
+      image: ""
+    },
+    price: {
+      regular: "One MILLLION DOLLARS",
+      discount: "5000%",
+      newPrice: "You First Born"
+    },
+    contact: {
+      websiteUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      dealUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+}
+var testArray = [testObject, testObject2]
 var markersArray = [];
 
 
@@ -55,10 +77,10 @@ var markersArray = [];
   // Sets the map on all markers in the array.
   function setMapOnAll(map) {
     for (var i = 0; i < markersArray.length; i++) {
-      placeMarker(dealReturn[i]);
-      console.log(dealReturn[i]);
+      placeMarker(markersArray[i]);
     }
   }
+
   // Removes the markers from the map, but keeps them in the array.
   function clearMarkers() {
     setMapOnAll(null);
@@ -74,11 +96,21 @@ var markersArray = [];
   function deleteMarkers() {
     clearMarkers();
     markersArray = [];
+    testArray = [];
   }
 
-
+  function markersArrayPush() {
+    for (var i = 0; i < dealReturn.length; i++) {
+      markersArray.push(dealReturn[i]);
+    }
+  }
   function checkArray(){
     for (var i = 0; i < markersArray.length; i++) {
       console.log(markersArray[i])
+    }
+  }
+  function testArrayLoop(){
+    for (var i = 0; i < 2; i++) {
+      placeMarker(testArray[i])
     }
   }
