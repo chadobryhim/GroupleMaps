@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<div class="ui sidebar right vertical menu">
+	<div class="ui sidebar right vertical menu" id="sidebar">
 		<a class="item">
 			<h2 class="ui header">About</h2>
 		</a>
@@ -25,7 +25,7 @@
 		</a>
 	</div>
 
-	<div class="ui sidebar left vertical menu">
+	<div class="ui sidebar left vertical menu" id="sidebar">
 		<a class="item">
 			<h2 class="ui header">My Account</h2>
 		</a>
@@ -77,7 +77,7 @@
 		</a>
 	</div>
 
-	<div class="ui sidebar bottom fixed stackable three column grid">
+	<div class="ui sidebar bottom fixed stackable three column grid" id="sidebar">
 		<!--button class="ui floated icon basic button" id="closeBtn">
       <i class="close icon"></i>
     </button-->
@@ -175,21 +175,18 @@
 			$('.ui.right.sidebar')
 				.sidebar('setting', 'transition', 'overlay')
 				.sidebar('toggle');
-			initMap();
 		});
 
 		$("#accountBtn").click(function() {
 			$('.ui.left.sidebar')
 				.sidebar('setting', 'transition', 'overlay')
 				.sidebar('toggle');
-			initMap();
 		});
 
 		$("#resultsBtn").click(function() {
 			$('.ui.bottom.sidebar')
 				.sidebar('setting', 'transition', 'overlay')
 				.sidebar('toggle');
-			initMap();
 		});
 
 		//      $("#closeBtn")
