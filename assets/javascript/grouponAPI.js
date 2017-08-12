@@ -52,7 +52,7 @@ function userInputEntered() {
         for (var i = response.deals.length - 1; i >= 0; i--) {
             var deal = response.deals[i];
             dealReturn.push({
-                loc: {
+                pos: {
                     lat: deal.division.lat,
                     lng: deal.division.lng
                 },
@@ -63,8 +63,14 @@ function userInputEntered() {
                     indDeals: []
                 },
                 contact: {
+                    merchantName: deal.merchant.name,
                     websiteUrl: deal.merchant.websiteUrl,
-                    dealUrl: deal.dealUrl
+                    dealUrl: deal.dealUrl,
+                    phoneNumber: deal.options[0].redemptionLocations[0].phoneNumber,
+                    streetAddress: deal.options[0].redemptionLocations[0].streetAddress1,
+                    city: deal.options[0].redemptionLocations[0].city,
+                    state: deal.options[0].redemptionLocations[0].state,
+                    zipCode:  deal.options[0].redemptionLocations[0].postalCode
                 }
             });
             for (var j = 0; j < response.deals[i].options.length; j++) {
