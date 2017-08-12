@@ -8,6 +8,10 @@ html, body {
 	padding: 0;
 }
 
+.segment {
+	margin-bottom: 1%;
+}
+
 #input {
 	position: absolute;
 	top: 0px;
