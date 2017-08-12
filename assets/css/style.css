@@ -13,10 +13,10 @@ html, body {
 }
 
 #input {
-	position: absolute;
+	position:fixed;
 	top: 0px;
 	left: 0px;
-	z-index: 0;
+	z-index: 10;
 	padding: 10px;
 	margin: 10px;
 	width: 30%;
@@ -34,8 +34,8 @@ html, body {
 	margin-bottom: 1%;
 }
 
-.sidebar {
-	z-index: 2;
+#sidebar {
+	z-index: 20;
 }
 
 .ui.grid {
