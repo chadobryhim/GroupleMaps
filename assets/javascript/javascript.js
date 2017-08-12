@@ -3,6 +3,7 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate
 var map, infoWindow;
+var userPos;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
@@ -18,7 +19,8 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-            console.log(pos);
+            console.log('pos is' + pos + 'lat is ' + position.coords.latitude);
+            userPos = pos;
             infoWindow.setPosition(pos);
             infoWindow.setContent('You!');
             infoWindow.open(map);
