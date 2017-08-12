@@ -60,6 +60,7 @@ function userInputEntered() {
                     websiteUrl: deal.merchant.websiteUrl,
                     dealUrl: deal.dealUrl
                 }
+
             });
 
             console.log(dealReturn);

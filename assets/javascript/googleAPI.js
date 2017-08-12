@@ -26,29 +26,26 @@ var markersArray = [];
 
 //places a marker
   function placeMarker(object){
-    var latLng = {lat: object.loc.lat, lng: object.loc.lng};
     var infoWindow = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">' +object.content.shortTitle+'</h1>'+
             '<div id="bodyContent">'+
             '<p><b>The Deal: </b> '+ object.content.adTitle+'</p>' +
-            '<p><b>The Fine Print: </b>'+ object.content.description + '</p>' +
+          //  '<p><b>The Fine Print: </b>'+ object.content.finePrint + '</p>' +
           //  '<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
             '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
             '</div>'+
             '</div>';
 
     var marker = new google.maps.Marker({
-      position: latLng,
+      position: new google.maps.LatLng(object.loc.lat, object.loc.lng),
       map: map
     });
     //Creates the content window to be filled in by the object
     var infowindow = new google.maps.InfoWindow({
       content: infoWindow
     });
-    //pushes the marker into an array so we can remove markers latter
-    markersArray.push(marker);
     marker.addListener('click', function() { //this opens the info window on click
     infowindow.open(map,marker);
 
@@ -58,7 +55,8 @@ var markersArray = [];
   // Sets the map on all markers in the array.
   function setMapOnAll(map) {
     for (var i = 0; i < markersArray.length; i++) {
-      markersArray[i].setMap(map);
+      placeMarker(dealReturn[i]);
+      console.log(dealReturn[i]);
     }
   }
   // Removes the markers from the map, but keeps them in the array.
@@ -75,32 +73,12 @@ var markersArray = [];
   // Deletes all markers in the array by removing references to them.
   function deleteMarkers() {
     clearMarkers();
-    markers = [];
+    markersArray = [];
   }
 
-  function placeAllMarkers(){
-    for (var i = 0; i < dealReturn.length; i++) {
-      var thisDeal = dealReturn[i];
-      var newMarker = {
-        loc: {
-              "lat":  thisDeal.loc.lat,
-              "lng":  thisDeal.loc.lng},
-        content: {
-            description: thisDeal.options[i].details[i],
-            adTitle: thisDeal.title,
-            shortTitle: thisDeal.announcementTitle,
-            image: thisDeal.grid4ImageUrl
-        },
-        price: {
-            regular: thisDeal.options[i].value.amount,
-            discount: thisDeal.options[i].discount.amount,
-            newPrice: thisDeal.options[i].price.amount
-        },
-        contact: {
-          websiteUrl: thisDeal.merchant.websiteUrl,
-          dealUrl: thisDeal.dealUrl
-        }
-      }
 
+  function checkArray(){
+    for (var i = 0; i < markersArray.length; i++) {
+      console.log(markersArray[i])
     }
   }
