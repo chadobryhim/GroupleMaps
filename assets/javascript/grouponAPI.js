@@ -30,6 +30,7 @@ function userInputEntered() {
     } else {
         url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&lat=' + testLocation.location.lat + '&long=' + testLocation.location.lng + '&limit=' + dealLimit;
     };
+    console.log(url);
 
 
     $.ajax({

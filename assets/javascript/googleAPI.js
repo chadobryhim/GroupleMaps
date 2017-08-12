@@ -1,7 +1,7 @@
 var testObject = {//a test groupon oject that will be how all the api needs to follow
   pos: {
-          "lat": 38.899794,
-          "lng": -94.726138},
+          "lat": 39.01214,
+          "lng": - 94.39042},
   content: {
     description: "For your weirdos",
     adTitle:"Lions for your militarty",
@@ -20,14 +20,13 @@ var testObject = {//a test groupon oject that will be how all the api needs to f
 
   }
 var markersArray = [];
-var grouponSearcher = 10;
 
 
 
 
 //places a marker
   function placeMarker(object){
-    var latLng = {lat: object.pos.lat, lng: object.pos.lng};
+    var latLng = {lat: object.loc.lat, lng: object.loc.lng};
     var infoWindow = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -35,7 +34,7 @@ var grouponSearcher = 10;
             '<div id="bodyContent">'+
             '<p><b>The Deal: </b> '+ object.content.adTitle+'</p>' +
             '<p><b>The Fine Print: </b>'+ object.content.description + '</p>' +
-            '<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
+          //  '<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
             '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
             '</div>'+
             '</div>';
@@ -79,23 +78,23 @@ var grouponSearcher = 10;
     markers = [];
   }
 
-  function placeAllMarkers(GrouponObject){
-    for (var i = 0; i < grouponSearcher; i++) {
+  function placeAllMarkers(){
+    for (var i = 0; i < dealReturn.length; i++) {
       var thisDeal = dealReturn[i];
       var newMarker = {
-        pos: {
+        loc: {
               "lat":  thisDeal.loc.lat,
               "lng":  thisDeal.loc.lng},
         content: {
-            description: thisDeal.options[0].details[0],
+            description: thisDeal.options[i].details[i],
             adTitle: thisDeal.title,
             shortTitle: thisDeal.announcementTitle,
             image: thisDeal.grid4ImageUrl
         },
         price: {
-            regular: thisDeal.options[0].value.amount,
-            discount: thisDeal.options[0].discount.amount,
-            newPrice: thisDeal.options[0].price.amount
+            regular: thisDeal.options[i].value.amount,
+            discount: thisDeal.options[i].discount.amount,
+            newPrice: thisDeal.options[i].price.amount
         },
         contact: {
           websiteUrl: thisDeal.merchant.websiteUrl,
@@ -103,6 +102,5 @@ var grouponSearcher = 10;
         }
       }
 
-      placeMarker(newMarker);
     }
   }
