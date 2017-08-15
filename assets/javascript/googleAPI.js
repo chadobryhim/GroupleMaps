@@ -55,31 +55,53 @@ var markersArray = [];
             '<div id="bodyContent">'+
             '<p><b>The Deal: </b> '+ object.content.adTitle+'</p>' +
           //  '<p><b>The Fine Print: </b>'+ object.content.finePrint + '</p>' +
-          //  '<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
+          //'<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
             '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
             '</div>'+
             '</div>';
 
     var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(object.loc.lat, object.loc.lng),
+      position: new google.maps.LatLng(object.pos.lat, object.pos.lng),
       map: map
     });
     //Creates the content window to be filled in by the object
     var infowindow = new google.maps.InfoWindow({
       content: infoWindow
     });
+    markersArray.push(marker)
     marker.addListener('click', function() { //this opens the info window on click
     infowindow.open(map,marker);
 
 
+
     });
   }
+
+  //puts the top results in the bottom bar
+  function resultsPlacer(n, object) {
+    var result = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">' +object.content.shortTitle+'</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>The Deal: </b> '+ object.content.adTitle+'</p>' +
+          //  '<p><b>The Fine Print: </b>'+ object.content.finePrint + '</p>' +
+          //'<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
+            '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
+            '</div>'+
+            '</div>';
+      $(".result-" + n).html(result);
+  }
+
   // Sets the map on all markers in the array.
   function setMapOnAll(map) {
     console.log("placed");
     for (var i = 0; i < dealReturn.length; i++) {
       placeMarker(dealReturn[i]);
       console.log("placed "+i);
+      if (i>3) {
+        resultsPlacer(i, dealReturn[i]);
+      }
     }
   }
 
@@ -87,7 +109,6 @@ var markersArray = [];
   function clearMarkers() {
     for (var i = 0; i < markersArray.length; i++) {
       markersArray[i].setMap(null);
-      map: map;
 
     }
   }
@@ -108,6 +129,7 @@ var markersArray = [];
   function markersArrayPush() {
     for (var i = 0; i < dealReturn.length; i++) {
       markersArray.push(dealReturn[i]);
+
     }
   }
   function checkArray(){

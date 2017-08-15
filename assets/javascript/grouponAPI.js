@@ -14,7 +14,10 @@ function userInputEntered() {
     console.log(userLocation);
     console.log(userLocation !== '');
     // Temporary variable to use as a location until we can get a location returned
-    var testLocation = userPos;
+    var testLocation = {
+        lat: 38.966675,
+        lng: -94.616898
+    };
 
     // These are a finite list of terms defined by groupon
     var dealCategory = $('#deal-category').val();
@@ -53,8 +56,8 @@ function userInputEntered() {
             var deal = response.deals[i];
             dealReturn.push({
                 pos: {
-                    lat: deal.division.lat,
-                    lng: deal.division.lng
+                    lat: deal.options[0].redemptionLocations[0].lat,
+                    lng: deal.options[0].redemptionLocations[0].lng
                 },
                 content: {
                     adTitle: deal.title,
