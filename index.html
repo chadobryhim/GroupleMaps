@@ -1,81 +1,117 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Groop</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
+	<title>Groop</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
 </head>
+
 <body>
-	<div class="ui sidebar right vertical menu">
-		<a class="item"><h2 class="ui header">About</h2>
+	<div class="ui sidebar right vertical menu" id="sidebar">
+		<a class="item">
+			<h2 class="ui header">About</h2>
 		</a>
 		<a class="item">
-		  <p>GroupMapper will use Groupon and Google Map APIs to capture the user’s location via IP address and serve a map of deals in the area.</p>
+			<p>GroupMapper will use Groupon and Google Map APIs to capture the user’s location via IP address and serve a map of deals in the area.</p>
 		</a>
 		<a class="item">
-		  <p>Groupon, while a great service, is needlessly cluttered for the average user. We will visualize the offers in a way that provides a superior and simpler experience. Users will be encouraged to return to easily find their bookmarked deals.</p>
+			<p>Groupon, while a great service, is needlessly cluttered for the average user. We will visualize the offers in a way that provides a superior and simpler experience. Users will be encouraged to return to easily find their bookmarked deals.</p>
 		</a>
 	</div>
 
-	<div class="ui sidebar left vertical menu">
-		<a class="item"><h2 class="ui header">My Account</h2>
+	<div class="ui sidebar left vertical menu" id="sidebar">
+		<a class="item">
+			<h2 class="ui header">My Account</h2>
 		</a>
 		<a class="item">
-		  <p>Login</p>
+			<p>Log-in to your account</p>
+			</h2>
+			<form class="ui form">
+				<div class="ui segment">
+					<div class="field">
+						<div class="ui left icon input">
+							<i class="user icon"></i>
+							<input type="text" name="email" placeholder="E-mail address">
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui left icon input">
+							<i class="lock icon"></i>
+							<input type="password" name="password" placeholder="Password">
+						</div>
+					</div>
+					<div class="ui primary basic submit button">Login</div>
+					<div class="ui primary basic submit button">Sign Up</div>
+				</div>
+
+				<div class="ui error message"></div>
+
+			</form>
 		</a>
 		<a class="item">
-		  <p>Favorites</p>
+			<p>Favorites</p>
+      <div class="row">
+        <div class="ui segment">
+          <h4>#1 Recent Fav Deal Name</h4>
+          Deal business<br> Deal value<br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui segment">
+          <h4>#2 Recent Fav Deal Name</h4>
+          Deal business<br> Deal value<br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui segment">
+          <h4>#3 Recent Fav Deal Name</h4>
+          Deal business<br> Deal value<br>
+        </div>
+      </div>
 		</a>
 	</div>
 
-  <div class="ui sidebar bottom fixed stackable three column grid">
-    <!--button class="ui floated icon basic button" id="closeBtn">
+	<div class="ui sidebar bottom fixed stackable three column grid" id="sidebar">
+		<!--button class="ui floated icon basic button" id="closeBtn">
       <i class="close icon"></i>
     </button-->
-    <div class="column">
-      <div class="ui segment">
-        <h4>#1 Deal name</h4>
-          Deal business<br>
-          Deal value<br>
-          Deal location<br>
-          Deal link
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui segment">
-        <h4>#2 Deal name</h4>
-          Deal business<br>
-          Deal value<br>
-          Deal location<br>
-          Deal link
-      </div>
-    </div>
-    <div class="column">
-      <div class="ui segment">
-        <h4>#3 Deal name</h4>
-          Deal business<br>
-          Deal value<br>
-          Deal location<br>
-          Deal link
-      </div>
-    </div>
-  </div>
+		<div class="column">
+			<div class="ui segment">
+				<h4>#1 Deal name</h4>
+				Deal business<br> Deal value<br> Deal location<br> Deal link
+			</div>
+		</div>
+		<div class="column">
+			<div class="ui segment">
+				<h4>#2 Deal name</h4>
+				Deal business<br> Deal value<br> Deal location<br> Deal link
+			</div>
+		</div>
+		<div class="column">
+			<div class="ui segment">
+				<h4>#3 Deal name</h4>
+				Deal business<br> Deal value<br> Deal location<br> Deal link
+			</div>
+		</div>
+	</div>
 
-    <div class="pusher" id="map"></div>
+	<div class="pusher" id="map"></div>
 
-    <div class="ui raised very padded text container segment" id="input">
-      <h2 class="ui header">User Input</h2>
-      <div class="ui action input" id="locationInput">
-        <input id="user-location" type="text" placeholder="City, State">
-        <button id="user-input-button" class="ui button">Go</button>
-      </div>
-      <p>
-      <select id="deal-category" name="categories" class="ui dropdown">
+	<div class="ui raised very padded text container segment" id="input">
+		<h2 class="ui header">User Input</h2>
+		<div class="ui action input left icon" id="locationInput">
+      <i class="location arrow icon"></i>
+			<input id="user-location" type="text" placeholder="City, State">
+			<button id="user-input-button" class="ui button">Go</button>
+		</div>
+		<p>
+			<select id="deal-category" name="categories" class="ui dropdown">
         <option value="">Categories</option>
         <option value="">All Deals</option>
         <option value="automotive">Automotive</option>
@@ -86,43 +122,77 @@
         <option value="retail">Retail</option>
         <option value="things-to-do">Things To Do</option>
       </select>
-      <button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button>
-      <button class="ui primary basic button" id="aboutBtn"><a href="#about">About</a></button>
-      <button class="ui primary basic button" id="resultsBtn"><a href="#results">Results</a></button>
-    </div>
+			<button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button>
+			<button class="ui primary basic button" id="aboutBtn"><a href="#about">About</a></button>
+			<button class="ui primary basic button" id="resultsBtn"><a href="#results">Results</a></button>
+	</div>
 
-    <script src="assets/javascript/javascript.js"></script>
-    <script src="assets/javascript/grouponAPI.js"></script>
+	<script src="assets/javascript/javascript.js"></script>
+	<script src="assets/javascript/grouponAPI.js"></script>
 	<script src="assets/javascript/googleAPI.js"></script>
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap"></script>
 
+	// Login script
+	<script>
+		$(document)
+			.ready(function() {
+				$('.ui.form')
+					.form({
+						fields: {
+							email: {
+								identifier: 'email',
+								rules: [{
+										type: 'empty',
+										prompt: 'Please enter your e-mail'
+									},
+									{
+										type: 'email',
+										prompt: 'Please enter a valid e-mail'
+									}
+								]
+							},
+							password: {
+								identifier: 'password',
+								rules: [{
+										type: 'empty',
+										prompt: 'Please enter your password'
+									},
+									{
+										type: 'length[6]',
+										prompt: 'Your password must be at least 6 characters'
+									}
+								]
+							}
+						}
+					});
+			});
+	</script>
+
+  // Sidebar behaviour script
 	<script type="text/javascript">
-		$("#aboutBtn").click(function(){
-		$('.ui.right.sidebar')
-			.sidebar('setting', 'transition', 'overlay' )
-  			.sidebar('toggle');
-		initMap();
-  		});
+		$("#aboutBtn").click(function() {
+			$('.ui.right.sidebar')
+				.sidebar('setting', 'transition', 'overlay')
+				.sidebar('toggle');
+		});
 
-  		$("#accountBtn").click(function(){
-		$('.ui.left.sidebar')
-			.sidebar('setting', 'transition', 'overlay' )
-  			.sidebar('toggle');
-		initMap();
-  		});
+		$("#accountBtn").click(function() {
+			$('.ui.left.sidebar')
+				.sidebar('setting', 'transition', 'overlay')
+				.sidebar('toggle');
+		});
 
-      $("#resultsBtn").click(function(){
-    $('.ui.bottom.sidebar')
-      .sidebar('setting', 'transition', 'overlay' )
-        .sidebar('toggle');
-    initMap();
-      });
+		$("#resultsBtn").click(function() {
+			$('.ui.bottom.sidebar')
+				.sidebar('setting', 'transition', 'overlay')
+				.sidebar('toggle');
+		});
 
-//      $("#closeBtn")
-//  .sidebar('toggle');
-//;
-
+		//      $("#closeBtn")
+		//  .sidebar('toggle');
+		//;
 	</script>
 </body>
+
 </html>
