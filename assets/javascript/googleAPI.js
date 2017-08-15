@@ -90,7 +90,7 @@ var markersArray = [];
             '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
             '</div>'+
             '</div>';
-      $(".result-" + n).html(result);
+      $("#result-" + n).html(result);
   }
 
   // Sets the map on all markers in the array.
@@ -99,7 +99,7 @@ var markersArray = [];
     for (var i = 0; i < dealReturn.length; i++) {
       placeMarker(dealReturn[i]);
       console.log("placed "+i);
-      if (i>3) {
+      if (i<3) {
         resultsPlacer(i, dealReturn[i]);
       }
     }
