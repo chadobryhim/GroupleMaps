@@ -61,7 +61,7 @@ var markersArray = [];
             '</div>';
 
     var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(object.loc.lat, object.loc.lng),
+      position: new google.maps.LatLng(object.pos.lat, object.pos.lng),
       map: map
     });
     //Creates the content window to be filled in by the object
@@ -76,6 +76,7 @@ var markersArray = [];
   }
   // Sets the map on all markers in the array.
   function setMapOnAll(map) {
+    markersArrayPush();
     for (var i = 0; i < markersArray.length; i++) {
       placeMarker(markersArray[i]);
     }
@@ -83,7 +84,11 @@ var markersArray = [];
 
   // Removes the markers from the map, but keeps them in the array.
   function clearMarkers() {
-    setMapOnAll(null);
+    for (var i = 0; i < markersArray.length; i++) {
+      markersArray[i].setMap(null);
+      map: map;
+
+    }
   }
 
 

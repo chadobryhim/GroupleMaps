@@ -14,7 +14,10 @@ function userInputEntered() {
     console.log(userLocation);
     console.log(userLocation !== '');
     // Temporary variable to use as a location until we can get a location returned
-    var testLocation = userPos;
+    var testLocation = {
+        lat: 38.966675,
+        lng: -94.616898
+    };
 
     // These are a finite list of terms defined by groupon
     var dealCategory = $('#deal-category').val();
@@ -52,9 +55,9 @@ function userInputEntered() {
         for (var i = response.deals.length - 1; i >= 0; i--) {
             var deal = response.deals[i];
             dealReturn.push({
-                loc: {
-                    lat: deal.division.lat,
-                    lng: deal.division.lng
+                pos: {
+                    lat: deal.options[0].redemptionLocations[0].lat,
+                    lng: deal.options[0].redemptionLocations[0].lng
                 },
                 content: {
                     adTitle: deal.title,
@@ -63,8 +66,14 @@ function userInputEntered() {
                     indDeals: []
                 },
                 contact: {
+                    merchantName: deal.merchant.name,
                     websiteUrl: deal.merchant.websiteUrl,
-                    dealUrl: deal.dealUrl
+                    dealUrl: deal.dealUrl,
+                    phoneNumber: deal.options[0].redemptionLocations[0].phoneNumber,
+                    streetAddress: deal.options[0].redemptionLocations[0].streetAddress1,
+                    city: deal.options[0].redemptionLocations[0].city,
+                    state: deal.options[0].redemptionLocations[0].state,
+                    zipCode:  deal.options[0].redemptionLocations[0].postalCode
                 }
             });
             for (var j = 0; j < response.deals[i].options.length; j++) {
