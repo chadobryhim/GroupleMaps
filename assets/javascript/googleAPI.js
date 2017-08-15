@@ -111,6 +111,8 @@ var markersArray = [];
       markersArray[i].setMap(null);
 
     }
+    markersArray = [];
+    dealReturn = [];
   }
 
 
