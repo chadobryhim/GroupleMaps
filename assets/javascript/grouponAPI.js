@@ -123,16 +123,16 @@ function userInputEntered() {
             if (userPos !== '') {
                 if ($('#deal-category').val() !== '') {
                     console.log(userPos + 'this works?');
-                    url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&filters=category:' + dealCategory + '&lat=' + userPos.lat + '&long=' + userPos.lng + '&limit=' + dealLimit;
+                    url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&filters=category:' + dealCategory + '&lat=' + userPos.lat + '&long=' + userPos.lng + '&limit=' + dealLimit;
                 } else {
-                    url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&lat=' + userPos.lat + '&long=' + userPos.lng + '&limit=' + dealLimit;
+                    url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&lat=' + userPos.lat + '&long=' + userPos.lng + '&limit=' + dealLimit;
                 }
                 ;
             } else {
                 if ($('#deal-category').val() !== '') {
-                    url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&filters=category:' + dealCategory + '&limit=' + dealLimit;
+                    url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&&radius=5filters=category:' + dealCategory + '&limit=' + dealLimit;
                 } else {
-                    url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&limit=' + dealLimit;
+                    url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&limit=' + dealLimit;
                 }
                 ;
             }
@@ -215,6 +215,7 @@ function userInputEntered() {
                     k++
                 }
                 console.log(dealReturn);
+                setMapOnAll();
             });
         }
     // Temporary variable to use as a location until we can get a location returned
