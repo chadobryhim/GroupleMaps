@@ -1,4 +1,10 @@
 var dealReturn = [];
+// These are a finite list of terms defined by groupon
+var dealCategory = $('#deal-category').val();
+
+// How many deals are returned from the api call, currently hardcoded
+var dealLimit = 10;
+var url;
 
 $(window).on('load', function() {
     userInputEntered();
@@ -221,12 +227,7 @@ function userInputEntered() {
         }
     // Temporary variable to use as a location until we can get a location returned
 
-    // These are a finite list of terms defined by groupon
-    var dealCategory = $('#deal-category').val();
 
-    // How many deals are returned from the api call, currently hardcoded
-    var dealLimit = 10;
-    var url;
 
     // if (userPos !== '') {
     //     if ($('#deal-category').val() !== '') {
