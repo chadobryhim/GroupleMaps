@@ -114,6 +114,7 @@ function userInputEntered() {
                             k++
                         }
                         console.log(dealReturn);
+                        setMapOnAll(map);
                     });
                 } else {
                     alert("Something got wrong " + status);
