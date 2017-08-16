@@ -76,9 +76,9 @@ function buildUrl() {
     if (userPos !== '') {
         if (dealCategory !== '') {
             console.log(userPos + 'this works?');
-            url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&filters=category:' + dealCategory + '&lat=' + userPos.lat + '&long=' + userPos.lng + '&limit=' + dealLimit;
+            url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&filters=category:' + dealCategory + '&lat=' + userPos.lat + '&lng=' + userPos.lng + '&limit=' + dealLimit;
         } else {
-            url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&lat=' + userPos.lat + '&long=' + userPos.lng + '&limit=' + dealLimit;
+            url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&lat=' + userPos.lat + '&lng=' + userPos.lng + '&limit=' + dealLimit;
         }
     } else {
         if (dealCategory !== '') {

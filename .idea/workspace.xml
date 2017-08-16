@@ -4,8 +4,6 @@
     <list default="true" id="51b92fce-089f-4044-be3e-76eb203e9a15" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/javascript/grouponAPI.js" afterPath="$PROJECT_DIR$/assets/javascript/grouponAPI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/javascript/javascript.js" afterPath="$PROJECT_DIR$/assets/javascript/javascript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +37,8 @@
           <file leaf-file-name="grouponAPI.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2070">
-                  <caret line="138" column="2" lean-forward="false" selection-start-line="138" selection-start-column="2" selection-end-line="138" selection-end-column="2" />
+                <state relative-caret-position="1170">
+                  <caret line="78" column="167" lean-forward="false" selection-start-line="78" selection-start-column="167" selection-end-line="78" selection-end-column="167" />
                   <folding />
                 </state>
               </provider>
@@ -113,8 +111,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="33" />
-    <option name="y" value="59" />
+    <option name="x" value="62" />
+    <option name="y" value="39" />
     <option name="width" value="1609" />
     <option name="height" value="957" />
   </component>
@@ -315,7 +313,7 @@
       <workItem from="1502551098317" duration="3970000" />
       <workItem from="1502825422264" duration="1422000" />
       <workItem from="1502838333710" duration="7543000" />
-      <workItem from="1502847353026" duration="3390000" />
+      <workItem from="1502847353026" duration="3867000" />
     </task>
     <task id="LOCAL-00001" summary="Added html structure">
       <created>1501949301952</created>
@@ -485,14 +483,21 @@
       <option name="project" value="LOCAL" />
       <updated>1502849001941</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Refactored some functions. Still working on why location is fucked">
+      <created>1502862409858</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1502862409858</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40005000" />
+    <option name="totallyTimeSpent" value="40482000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="33" y="59" width="1609" height="957" extended-state="0" />
+    <frame x="62" y="39" width="1609" height="957" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15910503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -574,7 +579,8 @@
     <MESSAGE value="Small change" />
     <MESSAGE value="Fixed api not returning without defined location" />
     <MESSAGE value="Fixed issue #411728" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue #411728" />
+    <MESSAGE value="Refactored some functions. Still working on why location is fucked" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored some functions. Still working on why location is fucked" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -826,8 +832,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" column="2" lean-forward="false" selection-start-line="138" selection-start-column="2" selection-end-line="138" selection-end-column="2" />
+        <state relative-caret-position="1170">
+          <caret line="78" column="167" lean-forward="false" selection-start-line="78" selection-start-column="167" selection-end-line="78" selection-end-column="167" />
           <folding />
         </state>
       </provider>
