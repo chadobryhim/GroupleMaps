@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 	<meta charset="utf-8">
@@ -78,23 +79,23 @@
 	</div>
 
 	<div class="ui sidebar bottom fixed stackable three column grid" id="sidebar">
-		<!--button class="ui floated icon basic button" id="closeBtn">
+		<button class="ui floated icon basic button" id="closeBtn">
       <i class="close icon"></i>
-    </button-->
+    </button>
 		<div class="column">
-			<div class="ui segment" id = "result-0">
+			<div class="ui segment clearfix" id = "result-0">
 				<h4>#1 Deal name</h4>
 				Deal business<br> Deal value<br> Deal location<br> Deal link
 			</div>
 		</div>
 		<div class="column">
-			<div class="ui segment" id = "result-1">
+			<div class="ui segment clearfix" id = "result-1">
 				<h4>#2 Deal name</h4>
 				Deal business<br> Deal value<br> Deal location<br> Deal link
 			</div>
 		</div>
 		<div class="column">
-			<div class="ui segment" id = "result-2">
+			<div class="ui segment clearfix" id = "result-2">
 				<h4>#3 Deal name</h4>
 				Deal business<br> Deal value<br> Deal location<br> Deal link
 			</div>
@@ -104,7 +105,7 @@
 	<div class="pusher" id="map"></div>
 
 	<div class="ui raised very padded text container segment" id="input">
-		<h2 class="ui header">User Input</h2>
+		<img src="assets/img/grooplemaps-logo.png" class="img-responsive float-left" alt="GroopleMaps">
 		<div class="ui action input left icon" id="locationInput">
       <i class="location arrow icon"></i>
 			<input id="user-location" type="text" placeholder="City, State">
@@ -189,8 +190,14 @@
 				.sidebar('toggle');
 		});
 
-		//      $("#closeBtn")
-		//  .sidebar('toggle');
+		$("#closeBtn").click(function() {
+			$('.ui.bottom.sidebar')
+				.sidebar('setting', 'transition', 'overlay')
+				.sidebar('toggle');
+		});
+
+		//$("#closeBtn")
+		  //.sidebar('toggle');
 		//;
 	</script>
 </body>
