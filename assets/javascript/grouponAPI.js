@@ -1,11 +1,11 @@
 var dealReturn = [];
 
 $(window).on('load', function() {
-    userInputEntered();
+
 });
 
 $(document).on('click', '#user-input-button', function() {
-    userInputEntered();
+
 });
 
 function userInputEntered() {
@@ -91,6 +91,7 @@ function userInputEntered() {
             }
             k++
         }
+        setMapOnAll(map);
         console.log(dealReturn);
     });
 }

@@ -45,8 +45,9 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 
 $(".submit").on("click", function() {
+  clearMarkers();
   userInputEntered();
-  setMapOnAll(map);
+//  setMapOnAll(map);
 })
 
 $(".save").on("click", function() {

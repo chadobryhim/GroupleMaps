@@ -57,6 +57,7 @@ var markersArray = [];
           //  '<p><b>The Fine Print: </b>'+ object.content.finePrint + '</p>' +
           //'<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
             '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
+            '<button class="ui primary basic button" id="save"><a href="#myAccount">Save</a></button>' +
             '</div>'+
             '</div>';
 
@@ -88,7 +89,7 @@ var markersArray = [];
           //  '<p><b>The Fine Print: </b>'+ object.content.finePrint + '</p>' +
           //'<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
             '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
-            '<button class="ui primary basic button" id="save"><a href="#myAccount">save</a></button>' +
+            '<button class="ui primary basic button" id="save"><a href="#myAccount">Save</a></button>' +
             '</div>'+
             '</div>';
       $("#result-" + n).html(result);
@@ -116,30 +117,19 @@ var markersArray = [];
     dealReturn = [];
   }
 
-
-  // Shows any markers currently in the array.
-  function showMarkers() {
-    setMapOnAll(map);
-  }
-
   // Deletes all markers in the array by removing references to them.
   function deleteMarkers() {
     clearMarkers();
     markersArray = [];
     testArray = [];
   }
-
-  function markersArrayPush() {
-    for (var i = 0; i < dealReturn.length; i++) {
-      markersArray.push(dealReturn[i]);
-
-    }
-  }
+  //artifact functions for the purposes of testing
   function checkArray(){
     for (var i = 0; i < markersArray.length; i++) {
       console.log(markersArray[i])
     }
   }
+
   function testArrayLoop(){
     for (var i = 0; i < 2; i++) {
       placeMarker(testArray[i])
