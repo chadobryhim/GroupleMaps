@@ -81,13 +81,11 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 $(document).on('click', '#user-input-button', function() {
     clearMarkers();
     userInputEntered();
-
     console.log('hello');
 });
 
 $(window).on('load', function() {
     userInputEntered();
-    setMapOnAll();
 });
 
 $(".save").on("click", function() {
