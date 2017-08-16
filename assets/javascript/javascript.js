@@ -33,8 +33,8 @@ function initMap() {
             map.setCenter(place.geometry.location);
             map.setZoom(17);  // Why 17? Because it looks good.
         }
-        marker.setPosition(place.geometry.location);
-        marker.setVisible(true);
+        // marker.setPosition(place.geometry.location);
+        // marker.setVisible(true);
 
         var address = '';
 
@@ -79,11 +79,23 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 };
 
 
-$(".submit").on("click", function() {
-  clearMarkers();
-  userInputEntered();
-//  setMapOnAll(map);
-})
+// $(".submit").on("click", function() {
+//   clearMarkers();
+//   userInputEntered();
+// //  setMapOnAll(map);
+// })
+
+$(document).on('click', '#user-input-button', function() {
+    clearMarkers();
+    userInputEntered();
+
+    console.log('hello');
+});
+
+$(window).on('load', function() {
+    userInputEntered();
+    setMapOnAll();
+});
 
 $(".save").on("click", function() {
 
