@@ -48,3 +48,7 @@ $(".submit").on("click", function() {
   userInputEntered();
   setMapOnAll(map);
 })
+
+$(".save").on("click", function() {
+
+})

@@ -88,6 +88,7 @@ var markersArray = [];
           //  '<p><b>The Fine Print: </b>'+ object.content.finePrint + '</p>' +
           //'<p><b>Price: </b><s>'+ object.price.regular + '</s> '+object.price.newPrice + ' '+ "<b> A Discount of "+object.price.discount+ '</p>' +
             '<p><b>URL: </b><a href="'+ object.contact.websiteUrl+'">'+ 'Company URL</a> <a href="'+object.contact.dealUrl +'"> Deal URL</a></p>'+
+            '<button class="ui primary basic button" id="save"><a href="#myAccount">save</a></button>' +
             '</div>'+
             '</div>';
       $("#result-" + n).html(result);
