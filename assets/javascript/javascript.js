@@ -77,3 +77,14 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
 };
+
+
+$(".submit").on("click", function() {
+  clearMarkers();
+  userInputEntered();
+//  setMapOnAll(map);
+})
+
+$(".save").on("click", function() {
+
+})
