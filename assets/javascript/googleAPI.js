@@ -1,50 +1,4 @@
-var testObject = {//a test groupon oject that will be how all the api needs to follow
-  loc: {
-          "lat": 39.01214,
-          "lng": - 94.39042},
-  content: {
-    description: "For your weirdos",
-    adTitle:"Lions for your militarty",
-    shortTitle: "We got Weird Shit",
-    image: ""
-  },
-  price: {
-    regular: "One MILLLION DOLLARS",
-    discount: "5000%",
-    newPrice: "You First Born"
-  },
-  contact: {
-    websiteUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    dealUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-  }
-
-  }
-var testObject2 = {
-
-    loc: {
-            lat: 39,
-            lng: - 94},
-    content: {
-      description: "For your weirdos",
-      adTitle:"Lions for your militarty",
-      shortTitle: "We got Weird Shit",
-      image: ""
-    },
-    price: {
-      regular: "One MILLLION DOLLARS",
-      discount: "5000%",
-      newPrice: "You First Born"
-    },
-    contact: {
-      websiteUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      dealUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    }
-}
-var testArray = [testObject, testObject2]
 var markersArray = [];
-
-
-
 
 //places a marker
   function placeMarker(object){
@@ -60,7 +14,6 @@ var markersArray = [];
             '<button class="ui primary basic button" id="save"><a href="#myAccount" target="_blank">Save</a></button>' +
             '</div>'+
             '</div>';
-
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(object.pos.lat, object.pos.lng),
       map: map
@@ -72,9 +25,6 @@ var markersArray = [];
     markersArray.push(marker)
     marker.addListener('click', function() { //this opens the info window on click
     infowindow.open(map,marker);
-
-
-
     });
   }
 
@@ -122,17 +72,10 @@ var markersArray = [];
   function deleteMarkers() {
     clearMarkers();
     markersArray = [];
-    testArray = [];
   }
   //artifact functions for the purposes of testing
   function checkArray(){
     for (var i = 0; i < markersArray.length; i++) {
       console.log(markersArray[i])
-    }
-  }
-
-  function testArrayLoop(){
-    for (var i = 0; i < 2; i++) {
-      placeMarker(testArray[i])
     }
   }

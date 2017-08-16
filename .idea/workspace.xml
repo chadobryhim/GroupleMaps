@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="51b92fce-089f-4044-be3e-76eb203e9a15" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/javascript/googleAPI.js" afterPath="$PROJECT_DIR$/assets/javascript/googleAPI.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/javascript/grouponAPI.js" afterPath="$PROJECT_DIR$/assets/javascript/grouponAPI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/javascript/javascript.js" afterPath="$PROJECT_DIR$/assets/javascript/javascript.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,21 +36,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="grouponAPI.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="grouponAPI.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1170">
-                  <caret line="78" column="167" lean-forward="false" selection-start-line="78" selection-start-column="167" selection-end-line="78" selection-end-column="167" />
+                <state relative-caret-position="1425">
+                  <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="googleAPI.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="googleAPI.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/javascript/googleAPI.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1195">
-                  <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                <state relative-caret-position="1200">
+                  <caret line="80" column="3" lean-forward="false" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -57,8 +59,8 @@
           <file leaf-file-name="javascript.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/javascript/javascript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="485">
-                  <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+                <state relative-caret-position="200">
+                  <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -90,8 +92,8 @@
       <list>
         <option value="$PROJECT_DIR$/assets/css/reset.css" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/assets/javascript/googleAPI.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/javascript/googleAPI.js" />
         <option value="$PROJECT_DIR$/assets/javascript/javascript.js" />
         <option value="$PROJECT_DIR$/assets/javascript/grouponAPI.js" />
       </list>
@@ -111,8 +113,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="y" value="39" />
+    <option name="x" value="-4" />
+    <option name="y" value="105" />
     <option name="width" value="1609" />
     <option name="height" value="957" />
   </component>
@@ -313,7 +315,7 @@
       <workItem from="1502551098317" duration="3970000" />
       <workItem from="1502825422264" duration="1422000" />
       <workItem from="1502838333710" duration="7543000" />
-      <workItem from="1502847353026" duration="3867000" />
+      <workItem from="1502847353026" duration="4079000" />
     </task>
     <task id="LOCAL-00001" summary="Added html structure">
       <created>1501949301952</created>
@@ -490,14 +492,21 @@
       <option name="project" value="LOCAL" />
       <updated>1502862409858</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Holy fuck I fixed it">
+      <created>1502862903868</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1502862903868</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40482000" />
+    <option name="totallyTimeSpent" value="40694000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="39" width="1609" height="957" extended-state="0" />
+    <frame x="-4" y="105" width="1609" height="957" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15910503" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -580,7 +589,8 @@
     <MESSAGE value="Fixed api not returning without defined location" />
     <MESSAGE value="Fixed issue #411728" />
     <MESSAGE value="Refactored some functions. Still working on why location is fucked" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored some functions. Still working on why location is fucked" />
+    <MESSAGE value="Holy fuck I fixed it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Holy fuck I fixed it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -816,24 +826,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/javascript/javascript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/javascript/googleAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1195">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="200">
+          <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/javascript/grouponAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="167" lean-forward="false" selection-start-line="78" selection-start-column="167" selection-end-line="78" selection-end-column="167" />
+        <state relative-caret-position="1425">
+          <caret line="95" column="36" lean-forward="false" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/javascript/googleAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="80" column="3" lean-forward="false" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
           <folding />
         </state>
       </provider>

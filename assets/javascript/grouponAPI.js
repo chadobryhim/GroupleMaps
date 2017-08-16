@@ -21,7 +21,7 @@ function addIndDeals(response, i) {
         });
     }
     k++
-};
+}
 
 function addDeals(response) {
     for (var i = response.deals.length - 1; i >= 0; i--) {
@@ -87,7 +87,7 @@ function buildUrl() {
             url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&limit=' + dealLimit;
         }
     }
-};
+}
 
 function userInputEntered() {
     userPos = '';
@@ -97,7 +97,7 @@ function userInputEntered() {
     if(userLocation !== '') {
         var geocoder = new google.maps.Geocoder();
         geocoder.geocode({'address': userLocation}, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
+            if (status === google.maps.GeocoderStatus.OK) {
                 userPos = {
                     lat: results[0].geometry.location.lat(),
                     lng: results[0].geometry.location.lng()
@@ -136,4 +136,4 @@ function userInputEntered() {
             console.log(dealReturn);
         });
     }
-};
+}
