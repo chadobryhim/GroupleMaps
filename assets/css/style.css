@@ -2,7 +2,21 @@
 	height: 100%;
 }
 
-#closeBtn {
+#closeBBtn {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 30;
+}
+
+#closeLBtn {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 30;
+}
+
+#closeRBtn {
 	position: fixed;
 	top: 0;
 	right: 0;
