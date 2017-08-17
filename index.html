@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 	<meta charset="utf-8">
@@ -35,19 +36,19 @@
 			<form class="ui form">
 				<div class="ui segment">
 					<div class="field">
-						<div class="ui left icon input">
+						<div class="ui left icon input" id="user-email-input">
 							<i class="user icon"></i>
 							<input type="text" name="email" placeholder="E-mail address">
 						</div>
 					</div>
 					<div class="field">
-						<div class="ui left icon input">
+						<div class="ui left icon input" id="user-password-input">
 							<i class="lock icon"></i>
 							<input type="password" name="password" placeholder="Password">
 						</div>
 					</div>
-					<div class="ui primary basic submit button">Login</div>
-					<div class="ui primary basic submit button">Sign Up</div>
+					<div class="ui primary basic submit button" id="add-user-button">Login</div>
+					<div class="ui primary basic submit button" id="add-sign-button">Sign Up</div>
 				</div>
 
 				<div class="ui error message"></div>
@@ -130,9 +131,9 @@
 	<script src="assets/javascript/javascript.js"></script>
 	<script src="assets/javascript/grouponAPI.js"></script>
 	<script src="assets/javascript/googleAPI.js"></script>
+	<script src="assets/javascript/firebase.js"></script>
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap"></script>
-
 	// Login script
 	<script>
 		$(document)
