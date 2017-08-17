@@ -69,8 +69,8 @@ function addDeals(response) {
             })
         }
         addIndDeals(response, i);
-    };
-};
+    }
+}
 
 function buildUrl() {
     if (userPos !== '') {
