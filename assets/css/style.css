@@ -2,6 +2,27 @@
 	height: 100%;
 }
 
+#closeBBtn {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 30;
+}
+
+#closeLBtn {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 30;
+}
+
+#closeRBtn {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 30;
+}
+
 html, body {
 	height: 100%;
 	margin: 0;
@@ -9,7 +30,7 @@ html, body {
 }
 
 .segment {
-	margin-bottom: 1%;
+		margin-bottom: 1%;
 }
 
 #input {
