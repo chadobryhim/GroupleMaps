@@ -75,9 +75,9 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   console.log(userPassword);
 });
 
-firebase.auth().onAuthStateChanged(function (user) {
-  debugger;
-  console.log(user);
-});
+// firebase.auth().onAuthStateChanged(function (user) {
+//   debugger;
+//   console.log(user);
+// });
 
 //
