@@ -42,16 +42,13 @@ var markersArray = [];
             '<button class="ui primary basic button" id="save"><a href="#myAccount" target="_blank">Save</a></button>' +
             '</div>'+
             '</div>';
-      console.log(result);
       $("#result-" + n).html(result);
   }
 
   // Sets the map on all markers in the array.
   function setMapOnAll(map) {
-    console.log("placed");
     for (var i = 0; i < dealReturn.length; i++) {
       placeMarker(dealReturn[i]);
-      console.log("placed "+i);
       if (i<3) {
         resultsPlacer(i, dealReturn[i]);
       }
@@ -76,6 +73,5 @@ var markersArray = [];
   //artifact functions for the purposes of testing
   function checkArray(){
     for (var i = 0; i < markersArray.length; i++) {
-      console.log(markersArray[i])
     }
   }

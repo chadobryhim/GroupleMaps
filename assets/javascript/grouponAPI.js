@@ -75,7 +75,6 @@ function addDeals(response) {
 function buildUrl() {
     if (userPos !== '') {
         if (dealCategory !== '') {
-            console.log(userPos + 'this works?');
             url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&filters=category:' + dealCategory + '&lat=' + userPos.lat + '&lng=' + userPos.lng + '&limit=' + dealLimit;
         } else {
             url = 'https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_987654_123456_0&radius=5&lat=' + userPos.lat + '&lng=' + userPos.lng + '&limit=' + dealLimit;
@@ -113,7 +112,6 @@ function userInputEntered() {
                     dealReturn = [];
                     addDeals(response);
                     setMapOnAll();
-                    console.log(dealReturn);
                     });
             } else {
                 alert("Something got wrong " + status);
@@ -121,7 +119,6 @@ function userInputEntered() {
         });
     } else {
         buildUrl();
-        console.log(url);
         $.ajax({
             url: url,
             // dataType set to "jsonp" is required for some reason
@@ -133,7 +130,6 @@ function userInputEntered() {
             //Currently the array pulls info on just the first deal
             addDeals(response);
             setMapOnAll();
-            console.log(dealReturn);
         });
     }
 }

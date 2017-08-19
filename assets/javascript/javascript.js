@@ -54,7 +54,6 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-            console.log('pos is' + pos + 'lat is ' + position.coords.latitude);
             userPos = pos;
             infoWindow.setPosition(pos);
             infoWindow.setContent('You!');
@@ -81,7 +80,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 $(document).on('click', '#user-input-button', function() {
     clearMarkers();
     userInputEntered();
-    console.log('hello');
 });
 
 $(window).on('load', function() {
