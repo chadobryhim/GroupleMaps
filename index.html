@@ -1,221 +1,202 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Groople Maps</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-	<meta charset="utf-8">
+    <title>Groople Maps</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
 </head>
-
 <body>
-	<div class="ui sidebar right vertical menu" id="sidebar">
-		<button class="ui floated icon basic button" id="closeRBtn">
-      <i class="close icon"></i>
+<div class="ui sidebar right vertical menu" id="sidebar">
+    <button class="ui floated icon basic button" id="closeRBtn">
+        <i class="close icon"></i>
     </button>
-		<a class="item">
-			<h2 class="ui header">About</h2>
-		</a>
-		<a class="item">
-			<h3 class="ui header">Description</h3>
-			<p>A web application for visualizing and consolidating Groupon deals in your city. This utilizes both the Google Map and Groupon APIs, finds user location via IP address, and gives users the opportunity to browse deals in their area or elsewhere!</p>
-		</a>
-		<a class="item">
-			<h3 class="ui header">Motivation</h3>
-			<p>Groupon, while a great service, is needlessly cluttered for the average user. We will visualize the offers in a way that provides a superior and simpler experience. Users will be encouraged to return to easily find their bookmarked deals.</p>
-		</a>
-		<a class="item">
-			<h3 class="ui header">Team TigerClaw</h3>
-			<p>Developed for the University of Kansas June 2017 Coding Boot Camp</p>
-			<a class="item" href="https://github.com/mhoppenrath" target="_blank">Michael Hoppenrath <i class="github icon"></i></a>
-			<a class="item" href="https://github.com/chadobryhim" target="_blank">Chad O'Bryhim <i class="github icon"></i></a>
-			<a class="item" href="https://github.com/teenagegrandma" target="_blank">Rebecca Preston <i class="github icon"></i></a>
-			<a class="item" href="https://github.com/Jaygles" target="_blank">Jacob Sullivan <i class="github icon"></i></a>
-	</div>
-
-	<div class="ui sidebar left vertical menu" id="sidebar">
-		<button class="ui floated icon basic button" id="closeLBtn">
-      <i class="close icon"></i>
+    <a class="item">
+        <h2 class="ui header">About</h2>
+    </a>
+    <a class="item">
+        <h3 class="ui header">Description</h3>
+        <p>A web application for visualizing and consolidating Groupon deals in your city. This utilizes both the Google Map and Groupon APIs, finds user location via IP address, and gives users the opportunity to browse deals in their area or elsewhere!</p>
+    </a>
+    <a class="item">
+        <h3 class="ui header">Motivation</h3>
+        <p>Groupon, while a great service, is needlessly cluttered for the average user. We will visualize the offers in a way that provides a superior and simpler experience. Users will be encouraged to return to easily find their bookmarked deals.</p>
+    </a>
+    <a class="item">
+        <h3 class="ui header">Team TigerClaw</h3>
+        <p>Developed for the University of Kansas June 2017 Coding Boot Camp</p>
+        <a class="item" href="https://github.com/mhoppenrath" target="_blank">Michael Hoppenrath <i class="github icon"></i></a>
+        <a class="item" href="https://github.com/chadobryhim" target="_blank">Chad O'Bryhim <i class="github icon"></i></a>
+        <a class="item" href="https://github.com/teenagegrandma" target="_blank">Rebecca Preston <i class="github icon"></i></a>
+        <a class="item" href="https://github.com/Jaygles" target="_blank">Jacob Sullivan <i class="github icon"></i></a>
+    </a>
+</div>
+<div class="ui sidebar left vertical menu" id="sidebar">
+    <button class="ui floated icon basic button" id="closeLBtn">
+        <i class="close icon"></i>
     </button>
-		<a class="item">
-			<h2 class="ui header">My Account</h2>
-		</a>
-		<a class="item">
-			<p>Log-in to your account</p>
-			</h2>
-			<form class="ui form">
-				<div class="ui segment">
-					<div class="field">
-						<div class="ui left icon input" id="user-email-input">
-							<i class="user icon"></i>
-							<input type="text" name="email" placeholder="E-mail address">
-						</div>
-					</div>
-					<div class="field">
-						<div class="ui left icon input" id="user-password-input">
-							<i class="lock icon"></i>
-							<input type="password" name="password" placeholder="Password">
-						</div>
-					</div>
-					<div class="ui primary basic submit button" id="add-user-button">Login</div>
-					<div class="ui primary basic submit button" id="add-sign-button">Sign Up</div>
-				</div>
-
-				<div class="ui error message"></div>
-
-			</form>
-		</a>
-		<a class="item">
-			<p>Favorites</p>
-			<div class="row">
-				<div class="ui segment">
-					<h4>#1 Recent Fav Deal Name</h4>
-					Deal business<br> Deal value<br>
-				</div>
-			</div>
-			<p>
-				<div class="row">
-					<div class="ui segment">
-						<h4>#2 Recent Fav Deal Name</h4>
-						Deal business<br> Deal value<br>
-					</div>
-				</div>
-				<p>
-					<div class="row">
-						<div class="ui segment">
-							<h4>#3 Recent Fav Deal Name</h4>
-							Deal business<br> Deal value<br>
-						</div>
-					</div>
-		</a>
-	</div>
-
-	<div class="ui sidebar bottom fixed stackable three column grid" id="sidebar">
-		<button class="ui floated icon basic button" id="closeBBtn">
-      <i class="close icon"></i>
+    <a class="item">
+        <h2 class="ui header">My Account</h2>
+    </a>
+    <a class="item">
+        <p>Log-in to your account</p>
+        <form class="ui form">
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui left icon input" id="user-email-input">
+                        <i class="user icon"></i>
+                        <input type="text" name="email" placeholder="E-mail address">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input" id="user-password-input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="ui primary basic submit button" id="add-user-button">Login</div>
+                <div class="ui primary basic submit button" id="add-sign-button">Sign Up</div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </a>
+    <a class="item">
+        <p>Favorites</p>
+        <div class="row">
+            <div class="ui segment">
+                <h4>#1 Recent Fav Deal Name</h4>
+                Deal business<br> Deal value<br>
+            </div>
+        </div>
+        <p>
+        <div class="row">
+            <div class="ui segment">
+                <h4>#2 Recent Fav Deal Name</h4>
+                Deal business<br> Deal value<br>
+            </div>
+        </div>
+        <p>
+        <div class="row">
+            <div class="ui segment">
+                <h4>#3 Recent Fav Deal Name</h4>
+                Deal business<br> Deal value<br>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="ui sidebar bottom fixed stackable three column grid" id="sidebar">
+    <button class="ui floated icon basic button" id="closeBBtn">
+        <i class="close icon"></i>
     </button>
-		<div class="column">
-			<div class="ui segment clearfix" id="result-0">
-				<h4>#1 Deal name</h4>
-				Deal business<br> Deal value<br> Deal location<br> Deal link
-			</div>
-		</div>
-		<div class="column">
-			<div class="ui segment clearfix" id="result-1">
-				<h4>#2 Deal name</h4>
-				Deal business<br> Deal value<br> Deal location<br> Deal link
-			</div>
-		</div>
-		<div class="column">
-			<div class="ui segment clearfix" id="result-2">
-				<h4>#3 Deal name</h4>
-				Deal business<br> Deal value<br> Deal location<br> Deal link
-			</div>
-		</div>
-	</div>
-
-	<div class="pusher" id="map"></div>
-
-	<div class="ui raised very padded text container segment" id="input">
-		<img src="assets/img/grooplemaps-logo.png" class="img-responsive float-left" alt="GroopleMaps">
-		<select id="deal-category" name="categories" class="ui dropdown">
-			<option value="">Categories</option>
-			<option value="">All Deals</option>
-			<option value="automotive">Automotive</option>
-			<option value="beauty-and-spas">Beauty and Spas</option>
-			<option value="food-and-drink">Food and Drink</option>
-			<option value="health-and-fitness">Health and Fitness</option>
-			<option value="personal-services">Personal Services</option>
-			<option value="retail">Retail</option>
-			<option value="things-to-do">Things To Do</option>
-		</select>
-		<div class="ui action input left icon" id="locationInput">
-			<i class="location arrow icon"></i>
-			<input id="user-location" placeholder="City, State">
-			<button id="user-input-button" class="ui button submit">Go</button>
-		</div>
-		<button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button>
-		<button class="ui primary basic button" id="resultsBtn"><a href="#results">Results</a></button>
-		<button class="ui primary basic button" id="aboutBtn"><a href="#about">About</a></button>
-	</div>
-
-	<script src="assets/javascript/grouponAPI.js"></script>
-	<script src="assets/javascript/googleAPI.js"></script>
-	<script src="assets/javascript/firebase.js"></script>
-
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap"></script>
-	// Login script
-	<script>
-		$(document)
-			.ready(function() {
-				$('.ui.form')
-					.form({
-						fields: {
-							email: {
-								identifier: 'email',
-								rules: [{
-										type: 'empty',
-										prompt: 'Please enter your e-mail'
-									},
-									{
-										type: 'email',
-										prompt: 'Please enter a valid e-mail'
-									}
-								]
-							},
-							password: {
-								identifier: 'password',
-								rules: [{
-										type: 'empty',
-										prompt: 'Please enter your password'
-									},
-									{
-										type: 'length[6]',
-										prompt: 'Your password must be at least 6 characters'
-									}
-								]
-							}
-						}
-					});
-			});
-	</script>
-
+    <div class="column">
+        <div class="ui segment clearfix" id="result-0">
+            <h4>#1 Deal name</h4>
+            Deal business<br> Deal value<br> Deal location<br> Deal link
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment clearfix" id="result-1">
+            <h4>#2 Deal name</h4>
+            Deal business<br> Deal value<br> Deal location<br> Deal link
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment clearfix" id="result-2">
+            <h4>#3 Deal name</h4>
+            Deal business<br> Deal value<br> Deal location<br> Deal link
+        </div>
+    </div>
+</div>
+<div class="pusher" id="map"></div>
+<div class="ui raised very padded text container segment" id="input">
+    <img src="assets/img/grooplemaps-logo.png" class="img-responsive float-left" alt="GroopleMaps">
+    <select id="deal-category" name="categories" class="ui dropdown">
+        <option value="">Categories</option>
+        <option value="">All Deals</option>
+        <option value="automotive">Automotive</option>
+        <option value="beauty-and-spas">Beauty and Spas</option>
+        <option value="food-and-drink">Food and Drink</option>
+        <option value="health-and-fitness">Health and Fitness</option>
+        <option value="personal-services">Personal Services</option>
+        <option value="retail">Retail</option>
+        <option value="things-to-do">Things To Do</option>
+    </select>
+    <div class="ui action input left icon" id="locationInput">
+        <i class="location arrow icon"></i>
+        <input id="user-location" placeholder="City, State">
+        <button id="user-input-button" class="ui button submit">Go</button>
+    </div>
+    <button class="ui primary basic button" id="accountBtn"><a href="#myAccount">My Account</a></button>
+    <button class="ui primary basic button" id="resultsBtn"><a href="#results">Results</a></button>
+    <button class="ui primary basic button" id="aboutBtn"><a href="#about">About</a></button>
+</div>
+<script src="assets/javascript/grouponAPI.js"></script>
+<script src="assets/javascript/googleAPI.js"></script>
+<script src="assets/javascript/firebase.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&callback=initMap"></script>
+<script>
+  // Login script
+  $(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            email: {
+              identifier: 'email',
+              rules: [{
+                type: 'empty',
+                prompt: 'Please enter your e-mail'
+              },
+                {
+                  type: 'email',
+                  prompt: 'Please enter a valid e-mail'
+                }
+              ]
+            },
+            password: {
+              identifier: 'password',
+              rules: [{
+                type: 'empty',
+                prompt: 'Please enter your password'
+              },
+                {
+                  type: 'length[6]',
+                  prompt: 'Your password must be at least 6 characters'
+                }
+              ]
+            }
+          }
+        });
+    });
+</script>
+<script type="text/javascript">
   // Sidebar behaviour script
-	<script type="text/javascript">
-		$("#aboutBtn").click(function() {
-			$('.ui.right.sidebar')
-				.sidebar('setting', 'transition', 'overlay')
-				.sidebar('toggle');
-		});
+  $("#aboutBtn").click(function() {
+    $('.ui.right.sidebar')
+      .sidebar('setting', 'transition', 'overlay')
+      .sidebar('toggle');
+  });
 
-		$("#accountBtn").click(function() {
-			$('.ui.left.sidebar')
-				.sidebar('setting', 'transition', 'overlay')
-				.sidebar('toggle');
-		});
+  $("#accountBtn").click(function() {
+    $('.ui.left.sidebar')
+      .sidebar('setting', 'transition', 'overlay')
+      .sidebar('toggle');
+  });
 
-		$("#resultsBtn").click(function() {
-			$('.ui.bottom.sidebar')
-				.sidebar('setting', 'transition', 'overlay')
-				.sidebar('toggle');
-		});
-
-		//      $("#closeBtn")
-		//  .sidebar('toggle');
-		//;
-	</script>
-=======
-	<script src="assets/javascript/javascript.js"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&libraries=places&callback=initMap"></script>
-	<script src="assets/javascript/sidebars.js"></script>
-
->>>>>>> 25c3148f76dd056bc6b000d1f5389346aea9d0c6
+  $("#resultsBtn").click(function() {
+    $('.ui.bottom.sidebar')
+      .sidebar('setting', 'transition', 'overlay')
+      .sidebar('toggle');
+  });
+</script>
+<script src="assets/javascript/javascript.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPGio1qeFJ5UOKsfrk6SVfWj2SsgpGPI&libraries=places&callback=initMap"></script>
+<script src="assets/javascript/sidebars.js"></script>
 </body>
-
 </html>
